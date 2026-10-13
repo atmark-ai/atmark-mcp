@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "atmark": {
+      "url": "https://api.atmark.ai/mcp",
+      "headers": {
+        "Authorization": "Bearer ${env:ATMARK_AGENT_TOKEN}"
+      }
+    }
+  }
+}

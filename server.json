@@ -1,0 +1,26 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "ai.atmark/atmark",
+  "title": "Atmark",
+  "description": "Email for AI agents: its own address, not your Gmail. Invite-only; requires an agent token.",
+  "websiteUrl": "https://atmark.ai",
+  "repository": {
+    "url": "https://github.com/atmark-ai/atmark-mcp",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.atmark.ai/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer <agent token (atk_agent_...)> from the Atmark console",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+# Add under mcp_servers in ~/.hermes/config.yaml.
+# Put ATMARK_AGENT_TOKEN in ~/.hermes/.env (mode 600), never in this file.
+mcp_servers:
+  atmark:
+    url: "https://api.atmark.ai/mcp"
+    headers:
+      Authorization: "Bearer ${env:ATMARK_AGENT_TOKEN}"
+    timeout: 60
+    connect_timeout: 30
